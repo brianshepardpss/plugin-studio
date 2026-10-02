@@ -1,12 +1,24 @@
 {
   "name": "plugin-studio",
   "displayName": "Plugin Studio",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Run a portfolio of Claude plugins like a studio: rank gaps with live demand data, track every published plugin's traction daily, and get a kill / iterate / double-down verdict at day 30 against thresholds set before launch.",
-  "author": {"name": "Press Start Studios", "email": "brian@press-start-studios.com", "url": "https://github.com/brianshepardpss"},
+  "author": {
+    "name": "Press Start Studios",
+    "email": "brian@press-start-studios.com",
+    "url": "https://github.com/brianshepardpss"
+  },
   "homepage": "https://github.com/brianshepardpss/plugin-studio",
   "repository": "https://github.com/brianshepardpss/plugin-studio",
   "license": "MIT",
-  "keywords": ["plugin-portfolio", "traction", "analytics", "demand-research", "github-traffic"],
-  "skills": ["./skills/"]
+  "keywords": [
+    "plugin-portfolio",
+    "traction",
+    "analytics",
+    "demand-research",
+    "github-traffic"
+  ],
+  "skills": [
+    "./skills/"
+  ]
 }
