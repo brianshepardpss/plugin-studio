@@ -1,0 +1,52 @@
+{
+  "owner": "example-studio",
+  "plugins": [
+    {
+      "name": "invoice-desk",
+      "repo": "invoice-desk",
+      "launched": "2026-08-01",
+      "thresholds": {
+        "cloners": 150,
+        "stars": 40,
+        "requests": 10
+      }
+    },
+    {
+      "name": "shift-planner",
+      "repo": "shift-planner",
+      "launched": "2026-08-01",
+      "thresholds": {
+        "cloners": 150,
+        "stars": 40,
+        "requests": 10
+      }
+    },
+    {
+      "name": "menu-poet",
+      "repo": "menu-poet",
+      "launched": "2026-08-01",
+      "thresholds": {
+        "cloners": 75,
+        "stars": 15,
+        "requests": 5
+      }
+    },
+    {
+      "name": "lease-reader",
+      "repo": "lease-reader",
+      "launched": "2026-08-20",
+      "thresholds": {
+        "cloners": 75,
+        "stars": 15,
+        "requests": 5
+      }
+    },
+    {
+      "name": "next-idea",
+      "repo": "next-idea",
+      "thresholds": {
+        "cloners": 75
+      }
+    }
+  ]
+}
