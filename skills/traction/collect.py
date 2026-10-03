@@ -25,7 +25,8 @@ Scoring (printed with every report so it can be audited):
   progress = metric / threshold, per metric
   verdict at day >= 30: DOUBLE DOWN if every metric >= 100% of threshold,
              ITERATE if any metric >= 50%, otherwise STOP.
-  before day 30: ON TRACK if every metric >= (days/30) of threshold, else BEHIND.
+  days 0-2: TOO EARLY (GitHub traffic lags by hours).
+  days 3-29: ON TRACK if every metric >= (days/30) of threshold, else BEHIND.
 """
 import datetime as dt
 import html
@@ -101,8 +102,10 @@ def score(p, hist, snap, today):
     elif days >= 30:
         verdict = ("DOUBLE DOWN" if known and all(x >= 1 for x in known)
                    else "ITERATE" if any(x >= 0.5 for x in known) else "STOP")
+    elif days < 3:
+        verdict = "TOO EARLY"
     else:
-        pace = max(days, 1) / 30
+        pace = days / 30
         verdict = "ON TRACK" if known and all(x >= pace for x in known) else "BEHIND"
     return {"name": p["name"], "days": days, "values": vals, "progress": prog,
             "verdict": verdict, "spark": [since[d].get("clones_uniques", 0) for d in sorted(since)][-30:]}
